@@ -30,7 +30,7 @@ my-java-webapp/ ├── Jenkinsfile ├── pom.xml ├── src │   └�
 
 ## ⚙️ Build Instructions
 Clone the repository and build the `.war` file:
-Got it 👍 — here’s your README.md rewritten with clear section symbols and formatting so it looks polished and easy to copy straight into GitHub:
+
 
 
 my-java-webapp/ ├── Jenkinsfile ├── pom.xml ├── src │   └── main │       ├── java │       │   └── com/example/ContactServlet.java │       └── webapp │           ├── index.jsp │           └── success.jsp
