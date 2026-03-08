@@ -1,0 +1,23 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('build'){
+            steps{
+                git url : "https://github.com/HarshavardhanBhosale/email-fill-withtomcat.git" , branch : 'main'
+                echo "cloned success"
+            }
+        }
+        stage ('packages'){
+            steps{
+                bat 'mvn clean package'
+            }
+            
+        }
+        stage(deploy) {
+            steps{
+            deploy adapters: [tomcat9(credentialsId: 'jenkinsid', url: 'http://localhost:8081')], contextPath: '/my-java-webapp', war: '**/*.war'
+       }
+       }
+    }
+}
