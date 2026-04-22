@@ -68,6 +68,18 @@ This project includes a `Jenkinsfile` with stages:
 
 ---
 
+## 🐳 Docker Setup
+
+```bash
+docker build -t java-webapp-contact-form .
+docker run -d -p 8080:8080 -p 4848:4848 java-webapp-contact-form
+```
+
+Access:
+
+* http://localhost:8080
+* http://localhost:4848
+--- 
 ## 📜 License
 This project is licensed under the **MIT License** — feel free to use and adapt.
 
